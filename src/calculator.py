@@ -4,6 +4,9 @@ def addition(a, b):
 def subtraction(a, b):
     return a - b
 
+def multiplication(a, b):
+    return a * b
+
 class Calculator: #defines the blueprints of the object
     result = 0 #temporary placeholder for the "result property"
 
@@ -16,4 +19,8 @@ class Calculator: #defines the blueprints of the object
 
     def subtract(self, a, b):
         self.result = subtraction(a, b)
+        return self.result
+
+    def multiply(self, a, b):
+        self.result = multiplication (a, b)
         return self.result
