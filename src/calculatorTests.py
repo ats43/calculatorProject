@@ -26,6 +26,16 @@ class MyTestCase(unittest.TestCase): #unit tests are tests we write to test code
         self.assertEqual(self.calculator.multiply(5,2),10)
         self.assertEqual(self.calculator.result,10)
 
+    def test_division_method_calculator(self):
+        self.assertEqual(self.calculator.divide(100,5),20)
+        self.assertEqual(self.calculator.result, 20)
+
+    def test_division_method_calculator_by_zero(self):
+        # self.assertEqual(self.calculator.divide((1234, 0), "Cannot divide by 0!"),
+        with self.assertRaises(ZeroDivisionError):
+            12//0
+
+
 
 if __name__ == '__main__':
     unittest.main()
