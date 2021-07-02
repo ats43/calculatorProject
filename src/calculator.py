@@ -35,3 +35,7 @@ class Calculator: #defines the blueprints of the object
     def divide(self, a, b):
         self.result = division(a, b)
         return self.result
+
+    def square(self, a):
+        self.result = multiplication(a,a)
+        return self.result

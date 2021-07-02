@@ -35,6 +35,9 @@ class MyTestCase(unittest.TestCase): #unit tests are tests we write to test code
         with self.assertRaises(ZeroDivisionError):
             12//0
 
+    def test_square_method_calculator(self):
+        self.assertEqual(self.calculator.square(10),100)
+        self.assertEqual(self.calculator.result,100)
 
 
 if __name__ == '__main__':
