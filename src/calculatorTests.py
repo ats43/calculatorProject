@@ -1,3 +1,4 @@
+import math
 import unittest
 from calculator import Calculator #take calculator.py (module) and import the Calculator (class)
 
@@ -33,12 +34,19 @@ class MyTestCase(unittest.TestCase): #unit tests are tests we write to test code
     def test_division_method_calculator_by_zero(self):
         # self.assertEqual(self.calculator.divide((1234, 0), "Cannot divide by 0!"),
         with self.assertRaises(ZeroDivisionError):
-            12//0
+            self.calculator.divide(12/0)
 
     def test_square_method_calculator(self):
         self.assertEqual(self.calculator.square(10),100)
         self.assertEqual(self.calculator.result,100)
 
+    def test_sqrt_method_calculator(self):
+        self.assertEqual(self.calculator.sqrt(25),5)
+        self.assertEqual(self.calculator.result,5)
+
+    def test_sqrt_negatives_method_calculator(self):
+        with self.assertRaises(ValueError):
+            math.sqrt(-25)
 
 if __name__ == '__main__':
     unittest.main()

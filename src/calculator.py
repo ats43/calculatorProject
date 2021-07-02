@@ -1,3 +1,5 @@
+import math
+
 def addition(a, b):
     return a + b
 
@@ -38,4 +40,8 @@ class Calculator: #defines the blueprints of the object
 
     def square(self, a):
         self.result = multiplication(a,a)
+        return self.result
+
+    def sqrt(self,a):
+        self.result = math.sqrt(a)
         return self.result
