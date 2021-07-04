@@ -10,7 +10,6 @@ class CsvReader:
             for row in csv_data:
                 self.data.append(row)
                 pprint(row)
-        pprint (self.data)
         pass
 
     def return_data_as_objects(self, class_name):

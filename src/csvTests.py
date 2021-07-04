@@ -1,10 +1,11 @@
 import unittest
-from CsvReader import CsvReader, ClassFactory
+from csvReader import CsvReader, ClassFactory
 from pprint import pprint
+
 
 class MyTestCase(unittest.TestCase):
     def setUp(self) -> None:
-        self.csv_reader = CsvReader('csvFile.csv') #change csvFile per math operation
+        self.csv_reader = CsvReader('csvFile.csv')  # change csvFile per math operation
 
     def test_return_data_as_objects(self):
         people = self.csv_reader.return_data_as_objects('person')
@@ -12,8 +13,6 @@ class MyTestCase(unittest.TestCase):
         test_class = ClassFactory('person', self.csv_reader.data[0])
         for person in people:
             self.assertEqual(person.__name__, test_class.__name__)
-
-
 
 
 if __name__ == '__main__':
