@@ -20,12 +20,12 @@ def multiplication(a, b):
 
 
 def division(a, b):
-    a = int(a)
-    b = int(b)
+    a = float(a)
+    b = float(b)
     if a == 0:
         return "Cannot divide by 0!"
     else:
-        c = int(b) / int(a)
+        c = float(b) / float(a)
         return c
 
 
