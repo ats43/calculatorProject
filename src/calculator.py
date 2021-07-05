@@ -1,4 +1,5 @@
 import math
+import decimal
 
 
 def addition(a, b):
@@ -20,11 +21,13 @@ def multiplication(a, b):
 
 
 def division(a, b):
-    if b == 0:
+    a = int(a)
+    b = int(b)
+    if a == 0:
         return "Cannot divide by 0!"
     else:
-        c = float(a) / float(b)
-    return c
+        c = int(b) / int(a)
+        return c
 
 
 class Calculator:   # defines the blueprints of the object

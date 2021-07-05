@@ -5,6 +5,7 @@ from csvReader import CsvReader
 from pprint import pprint
 
 
+
 class MyTestCase(unittest.TestCase):    # unit tests are tests we write to test code. (TDD) test driven development
     def setUp(self) -> None:
         self.calculator = Calculator()  # instantiates calculator in each test.
@@ -30,16 +31,19 @@ class MyTestCase(unittest.TestCase):    # unit tests are tests we write to test 
     #         self.assertEqual(self.calculator.subtract(row['Value 1'], row['Value 2']), int(row['Result']))
     #         self.assertEqual(self.calculator.result, int(row['Result']))
 
-    def test_multiplication_method_calculator(self):
-        test_data = CsvReader('/src/Unit Test Multiplication.csv').data
+    # def test_multiplication_method_calculator(self):
+    #     test_data = CsvReader('/src/Unit Test Multiplication.csv').data
+    #     pprint(test_data)
+    #     for row in test_data:
+    #         self.assertEqual(self.calculator.multiply(row['Value 1'], row['Value 2']), int(row['Result']))
+    #         self.assertEqual(self.calculator.result, int(row['Result']))
+    #
+    def test_division_method_calculator(self):
+        test_data = CsvReader('/src/Unit Test Division.csv').data
         pprint(test_data)
         for row in test_data:
-            self.assertEqual(self.calculator.multiply(row['Value 1'], row['Value 2']), int(row['Result']))
-            self.assertEqual(self.calculator.result, int(row['Result']))
-    #
-    # def test_division_method_calculator(self):
-    #     self.assertEqual(self.calculator.divide(100, 5), 20)
-    #     self.assertEqual(self.calculator.result, 20)
+            self.assertAlmostEqual(self.calculator.divide(row['Value 1'], row['Value 2']), float(row['Result']))
+            self.assertAlmostEqual(self.calculator.result, float(row['Result']))
 
     # def test_division_method_calculator_by_zero(self):
     #     # self.assertEqual(self.calculator.divide((1234, 0), "Cannot divide by 0!"),
