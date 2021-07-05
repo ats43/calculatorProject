@@ -1,4 +1,3 @@
-# import math
 import unittest
 from calculator import Calculator    # take calculator.py (module) and import the Calculator (class)
 from csvReader import CsvReader
@@ -49,17 +48,20 @@ class MyTestCase(unittest.TestCase):    # unit tests are tests we write to test 
     #     with self.assertRaises(ZeroDivisionError):
     #         self.calculator.divide(12, 0)
 
-    def test_square_method_calculator(self):
-        test_data = CsvReader('/src/Unit Test Square.csv').data
+    # def test_square_method_calculator(self):
+    #     test_data = CsvReader('/src/Unit Test Square.csv').data
+    #     pprint(test_data)
+    #     for row in test_data:
+    #         self.assertEqual(self.calculator.square(row['Value 1']), int(row['Result']))
+    #         self.assertEqual(self.calculator.result, int(row['Result']))
+
+    def test_sqrt_method_calculator(self):
+        test_data = CsvReader('/src/Unit Test Square Root.csv').data
         pprint(test_data)
         for row in test_data:
-            self.assertEqual(self.calculator.square(row['Value 1']), int(row['Result']))
-            self.assertEqual(self.calculator.result, int(row['Result']))
+            self.assertAlmostEqual(self.calculator.sqrt(float(row['Value 1'])), float(row['Result']))
+            self.assertAlmostEqual(self.calculator.result, float(row['Result']))
 
-    # def test_sqrt_method_calculator(self):
-    #     self.assertEqual(self.calculator.sqrt(25), 5)
-    #     self.assertEqual(self.calculator.result, 5)
-    #
     # def test_sqrt_negatives_method_calculator(self):
     #     with self.assertRaises(ValueError):
     #         math.sqrt(-25)

@@ -1,5 +1,4 @@
 import math
-import decimal
 
 
 def addition(a, b):
@@ -57,5 +56,5 @@ class Calculator:   # defines the blueprints of the object
         return self.result
 
     def sqrt(self, a):
-        self.result = math.sqrt(a)
+        self.result = float(math.sqrt(a))
         return self.result
