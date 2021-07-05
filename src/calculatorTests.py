@@ -1,12 +1,13 @@
 import unittest
 from calculator import Calculator    # take calculator.py (module) and import the Calculator (class)
 from csvReader import CsvReader
-# from pprint import pprint
 
 
 class MyTestCase(unittest.TestCase):    # unit tests are tests we write to test code. (TDD) test driven development
-    def setUp(self) -> None:
+    def setUp(self, a, b) -> None:
         self.calculator = Calculator()  # instantiates calculator in each test.
+        self.a = int(a)
+        self.b = int(b)
 
     def test_instantiate_calculator(self):
         self.assertIsInstance(self.calculator, Calculator)    # tests if there is a calculator (instance, isItAClass?)
@@ -15,28 +16,28 @@ class MyTestCase(unittest.TestCase):    # unit tests are tests we write to test 
         self.assertEqual(self.calculator.result, 0)
 
     def test_add_method_calculator(self):
-        print("Begin Addition Test")
+        print("Beginning Addition Test")
         test_data_add = CsvReader('/src/Unit Test Addition.csv').data
         for row in test_data_add:
             self.assertEqual(self.calculator.add(row['Value 1'], row['Value 2']), int(row['Result']))
         print("Completed Addition Test")
 
     def test_subtract_method_calculator(self):
-        print("Begin Subtraction Test")
+        print("Beginning Subtraction Test")
         test_data_subtract = CsvReader('/src/Unit Test Subtraction.csv').data
         for row in test_data_subtract:
             self.assertEqual(self.calculator.subtract(row['Value 1'], row['Value 2']), int(row['Result']))
         print("Completed Subtraction Test")
 
     def test_multiplication_method_calculator(self):
-        print("Begin Multiplication Test")
+        print("Beginning Multiplication Test")
         test_data = CsvReader('/src/Unit Test Multiplication.csv').data
         for row in test_data:
             self.assertEqual(self.calculator.multiply(row['Value 1'], row['Value 2']), int(row['Result']))
         print("Completed Multiplication Test")
 
     def test_division_method_calculator(self):
-        print("Begin Division Test")
+        print("Beginning Division Test")
         test_data = CsvReader('/src/Unit Test Division.csv').data
         for row in test_data:
             self.assertAlmostEqual(self.calculator.divide(row['Value 1'], row['Value 2']), float(row['Result']))
@@ -48,14 +49,14 @@ class MyTestCase(unittest.TestCase):    # unit tests are tests we write to test 
     #         self.calculator.divide(12, 0)
 
     def test_square_method_calculator(self):
-        print("Begin Square Test")
+        print("Beginning Square Test")
         test_data = CsvReader('/src/Unit Test Square.csv').data
         for row in test_data:
             self.assertEqual(self.calculator.square(row['Value 1']), int(row['Result']))
         print("Completed Square Test")
 
     def test_sqrt_method_calculator(self):
-        print("Begin Square Root Test")
+        print("Beginning Square Root Test")
         test_data = CsvReader('/src/Unit Test Square Root.csv').data
         for row in test_data:
             self.assertAlmostEqual(self.calculator.sqrt(float(row['Value 1'])), float(row['Result']))
