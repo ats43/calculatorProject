@@ -4,10 +4,8 @@ from csvReader import CsvReader
 
 
 class MyTestCase(unittest.TestCase):    # unit tests are tests we write to test code. (TDD) test driven development
-    def setUp(self, a, b) -> None:
+    def setUp(self) -> None:
         self.calculator = Calculator()  # instantiates calculator in each test.
-        self.a = int(a)
-        self.b = int(b)
 
     def test_instantiate_calculator(self):
         self.assertIsInstance(self.calculator, Calculator)    # tests if there is a calculator (instance, isItAClass?)
