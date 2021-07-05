@@ -2,6 +2,8 @@ import math
 
 
 def addition(a, b):
+    a = int(a)
+    b = int(b)
     return a + b
 
 
@@ -34,8 +36,6 @@ class Calculator:   # defines the blueprints of the object
         return self.result
 
     def subtract(self, a, b):
-        a = int(a)
-        b = int(b)
         self.result = subtraction(a, b)
         return self.result
 
