@@ -1,6 +1,7 @@
 import unittest
 from calculator import Calculator    # take calculator.py (module) and import the Calculator (class)
 from csvReader import CsvReader
+import math
 
 
 class MyTestCase(unittest.TestCase):    # unit tests are tests we write to test code. (TDD) test driven development
@@ -42,7 +43,7 @@ class MyTestCase(unittest.TestCase):    # unit tests are tests we write to test 
         print("Completed Division Test")
 
     # def test_division_method_calculator_by_zero(self):
-    #     # self.assertEqual(self.calculator.divide((1234, 0), "Cannot divide by 0!"),
+    #     self.assertEqual(self.calculator.divide((1234, 0), "Cannot divide by 0!")
     #     with self.assertRaises(ZeroDivisionError):
     #         self.calculator.divide(12, 0)
 
@@ -61,9 +62,9 @@ class MyTestCase(unittest.TestCase):    # unit tests are tests we write to test 
             self.assertAlmostEqual(self.calculator.result, float(row['Result']))
         print("Completed Square Root Test")
 
-    # def test_sqrt_negatives_method_calculator(self):
-    #     with self.assertRaises(ValueError):
-    #         math.sqrt(-25)
+    def test_sqrt_negatives_method_calculator(self):
+        with self.assertRaises(ValueError):
+            math.sqrt(-25)
 
 
 if __name__ == '__main__':
