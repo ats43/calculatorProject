@@ -1,4 +1,4 @@
-from Calculator.calculator import Calculator
+from Calculator.Calculator import Calculator
 
 
 class Statistics(Calculator):
@@ -6,4 +6,3 @@ class Statistics(Calculator):
 
     def init(self):
         super().__init__()
-
