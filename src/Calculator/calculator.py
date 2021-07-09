@@ -1,32 +1,8 @@
+from Calculator.Addition import addition
+from Calculator.Subtraction import subtraction
+from Calculator.Multiplication import multiplication
+from Calculator.Division import division
 import math
-
-
-def addition(a, b):
-    a = int(a)
-    b = int(b)
-    return a + b
-
-
-def subtraction(a, b):
-    a = int(a)
-    b = int(b)
-    return b - a
-
-
-def multiplication(a, b):
-    a = int(a)
-    b = int(b)
-    return a * b
-
-
-def division(a, b):
-    a = float(a)
-    b = float(b)
-    if a == 0:
-        return "Cannot divide by 0!"
-    else:
-        c = float(b) / float(a)
-        return c
 
 
 class Calculator:   # defines the blueprints of the object
