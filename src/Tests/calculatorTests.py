@@ -1,6 +1,6 @@
 import unittest
-from calculator import Calculator    # take calculator.py (module) and import the Calculator (class)
-from csvReader import CsvReader
+from Calculator.calculator import Calculator    # take calculator.py (module) and import the Calculator (class)
+from CsvReader.csvReader import CsvReader
 import math
 
 
