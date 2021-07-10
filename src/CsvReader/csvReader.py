@@ -8,6 +8,7 @@ def class_factory(class_name, dictionary):
 
 
 class CsvReader:
+    data = []
 
     def __init__(self, filepath):
         self.data = []
@@ -15,7 +16,7 @@ class CsvReader:
             csv_data = csv.DictReader(text_data, delimiter=',')
             for row in csv_data:
                 self.data.append(row)
-                pprint(row)
+                # pprint(row)
         pass
 
     def return_data_as_objects(self, class_name):
