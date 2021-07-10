@@ -16,7 +16,7 @@ class MyTestCase(unittest.TestCase):    # unit tests are tests we write to test 
 
     def test_add_method_calculator(self):
         print("Beginning Addition Test")
-        test_data_add = CsvReader('/src/Tests/Data/Unit Test Addition.csv').data
+        test_data_add = CsvReader('Tests/Data/Unit Test Addition.csv').data
         for row in test_data_add:
             self.assertEqual(self.calculator.add(row['Value 1'], row['Value 2']), int(row['Result']))
         print("Completed Addition Test")
