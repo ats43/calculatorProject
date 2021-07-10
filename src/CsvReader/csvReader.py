@@ -1,6 +1,6 @@
 import csv
 from pprint import pprint
-from src.Fileutilities.absolutepath import absolutepath
+from src.Fileutilities.Absolutepath import absolutepath
 
 
 def class_factory(class_name, dictionary):
