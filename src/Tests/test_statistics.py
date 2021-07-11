@@ -1,3 +1,4 @@
+import statistics
 import unittest
 from src.CsvReader.csvReader import CsvReader
 # from src.Calculator.Calculator import Calculator
@@ -25,6 +26,11 @@ class MyTestCase(unittest.TestCase):
     #         print(row["Mean"])
     #         self.assertEqual(self.statistics.mean(row['Value 1']))
     #     print("Completed Mean Test")
+
+    def test_mean(self):
+        print("Beginning Mean Test")
+        self.assertEqual(statistics.mean([1, 2, 3]), 2)
+        print("Completed Mean Test")
 
 
 if __name__ == '__main__':

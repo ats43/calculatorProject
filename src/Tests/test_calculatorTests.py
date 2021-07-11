@@ -44,7 +44,6 @@ class MyTestCase(unittest.TestCase):    # unit tests are tests we write to test 
         print("Completed Division Test")
 
     # def test_division_method_calculator_by_zero(self):
-    #     self.assertEqual(self.calculator.divide((1234, 0), "Cannot divide by 0!")
     #     with self.assertRaises(ZeroDivisionError):
     #         self.calculator.divide(12, 0)
 
