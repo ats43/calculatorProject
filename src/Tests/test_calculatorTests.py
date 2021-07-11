@@ -3,7 +3,6 @@ from src.Calculator.Calculator import Calculator
 from src.CsvReader.csvReader import CsvReader
 
 
-
 class MyTestCase(unittest.TestCase):    # unit tests are tests we write to test code. (TDD) test driven development
     def setUp(self) -> None:
         self.calculator = Calculator()  # instantiates calculator in each test.
@@ -65,8 +64,6 @@ class MyTestCase(unittest.TestCase):    # unit tests are tests we write to test 
     # def test_sqrt_negatives_method_calculator(self):
     #     with self.assertRaises(ValueError):
     #         self.calculator.sqrt(-25)
-
-
 
 if __name__ == '__main__':
     unittest.main()
