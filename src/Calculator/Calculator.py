@@ -1,32 +1,9 @@
-import math
-
-
-def addition(a, b):
-    a = int(a)
-    b = int(b)
-    return a + b
-
-
-def subtraction(a, b):
-    a = int(a)
-    b = int(b)
-    return b - a
-
-
-def multiplication(a, b):
-    a = int(a)
-    b = int(b)
-    return a * b
-
-
-def division(a, b):
-    a = float(a)
-    b = float(b)
-    if a == 0:
-        return "Cannot divide by 0!"
-    else:
-        c = float(b) / float(a)
-        return c
+from src.Calculator.Addition import addition
+from src.Calculator.Subtraction import subtraction
+from src.Calculator.Multiplication import multiplication
+from src.Calculator.Division import division
+from src.Calculator.Square import square
+from src.Calculator.SquareRoot import sqrt
 
 
 class Calculator:   # defines the blueprints of the object
@@ -52,9 +29,9 @@ class Calculator:   # defines the blueprints of the object
         return self.result
 
     def square(self, a):
-        self.result = multiplication(a, a)
+        self.result = square(a)
         return self.result
 
     def sqrt(self, a):
-        self.result = float(math.sqrt(a))
+        self.result = sqrt(a)
         return self.result
