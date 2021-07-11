@@ -5,8 +5,8 @@ from src.Statistics.Statistics import Statistics
 
 
 class MyTestCase(unittest.TestCase):
-    test_data = CsvReader('/src/Tests/Data/Unit Test Data.csv').data
-    test_stats_answers = CsvReader('/src/Tests/Data/Unit Stats Answers.csv').data
+    test_data = CsvReader('src/Tests/Data/Unit Test Data.csv').data
+    test_stats_answers = CsvReader('src/Tests/Data/Unit Stats Answers.csv').data
 
     def setUp(self) -> None:
         self.statistics = Statistics()
