@@ -43,9 +43,9 @@ class MyTestCase(unittest.TestCase):    # unit tests are tests we write to test 
             self.assertAlmostEqual(self.calculator.divide(row['Value 1'], row['Value 2']), float(row['Result']))
         print("Completed Division Test")
 
-    # def test_division_method_calculator_by_zero(self):
-    #     with self.assertRaises(ZeroDivisionError):
-    #         self.calculator.divide(12, 0)
+    def test_division_method_calculator_by_zero(self):
+        with self.assertRaises(ZeroDivisionError):
+            self.calculator.divide(0, 1)
 
     def test_square_method_calculator(self):
         print("Beginning Square Test")
