@@ -62,9 +62,9 @@ class MyTestCase(unittest.TestCase):    # unit tests are tests we write to test 
             self.assertAlmostEqual(self.calculator.result, float(row['Result']))
         print("Completed Square Root Test")
 
-    # def test_sqrt_negatives_method_calculator(self):
-    #     with self.assertRaises(ValueError):
-    #         self.calculator.sqrt(-25)
+    def test_sqrt_negatives_method_calculator(self):
+        with self.assertRaises(ValueError):
+            self.calculator.sqrt(-25)
 
 
 if __name__ == '__main__':
