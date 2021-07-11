@@ -1,7 +1,8 @@
 from src.Calculator.Calculator import Calculator
-from src.Statistics.Mean import mean
 from src.CsvReader.csvReader import CsvReader
+from src.Statistics.Mean import mean
 from src.Statistics.SampleMean import sample_mean
+
 
 class Statistics(Calculator):
     data = []

@@ -3,9 +3,13 @@ from src.Calculator.Division import division
 
 
 def mean(data):
-    total = 0
-    length = len(data)
-    for num in data:
-        total = addition(total, num)
-        return division(total, length)
-
+    try:
+        total = 0
+        length = len(data)
+        for num in data:
+            total = addition(total, num)
+            return division(total, length)
+    except ZeroDivisionError:
+        print("Error: Cannot divide by 0!")
+    except ValueError:
+        print("Error: Incorrect data values given")
