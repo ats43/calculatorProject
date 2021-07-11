@@ -13,6 +13,11 @@ class MyTestCase(unittest.TestCase):
 
     def test_instantiate_calculator(self):
         self.assertIsInstance(self.statistics, Statistics)
+        print("Completed Stats Calc Instantiate Test")
+
+    def test_results_property_calculator(self):
+        self.assertEqual(self.statistics.result, 0)
+        print("Completed Stats Calc Property Test")
 
 
 if __name__ == '__main__':

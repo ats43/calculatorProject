@@ -9,9 +9,11 @@ class MyTestCase(unittest.TestCase):    # unit tests are tests we write to test 
 
     def test_instantiate_calculator(self):
         self.assertIsInstance(self.calculator, Calculator)    # tests if there is a calculator (instance, isItAClass?)
+        print("Completed Calc Instantiate Test ")
 
     def test_results_property_calculator(self):
         self.assertEqual(self.calculator.result, 0)
+        print("Completed Calc Property Test")
 
     def test_add_method_calculator(self):
         print("Beginning Addition Test")
@@ -64,6 +66,7 @@ class MyTestCase(unittest.TestCase):    # unit tests are tests we write to test 
     # def test_sqrt_negatives_method_calculator(self):
     #     with self.assertRaises(ValueError):
     #         self.calculator.sqrt(-25)
+
 
 if __name__ == '__main__':
     unittest.main()
