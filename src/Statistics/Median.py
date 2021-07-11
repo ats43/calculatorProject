@@ -13,7 +13,7 @@ def median(data):
             median2 = lst[int(subtraction((length // 2), 1))]   # this is the last element of the first half
             actual_median = division(addition(median1, median2), 2)
         else:
-            actual_median = lst[length // 2]
+            actual_median = lst[length // 2]    # this is the middle element if the data has an off number of elements
         return actual_median
     except ZeroDivisionError:
         print("Error: Cannot divide by 0!")
