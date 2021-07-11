@@ -5,8 +5,8 @@ from src.Statistics.Statistics import Statistics
 
 
 class MyTestCase(unittest.TestCase):
-    def test_something(self):
-        self.assertEqual(True, True)
+    test_data = CsvReader('/src/Tests/Data/Unit Test Data.csv').data
+    test_stats_answers = CsvReader('/src/Tests/Data/Unit Stats Answers.csv').data
 
     def setUp(self) -> None:
         self.statistics = Statistics()
@@ -18,6 +18,13 @@ class MyTestCase(unittest.TestCase):
     def test_results_property_calculator(self):
         self.assertEqual(self.statistics.result, 0)
         print("Completed Stats Calc Property Test")
+
+    def test_mean_method_calculator(self):
+        print("Beginning Mean Test")
+        for row in self.test_stats_answers:
+            print(row["Mean"])
+            self.assertEqual(self.statistics.mean(row['Value 1']))
+        print("Completed Mean Test")
 
 
 if __name__ == '__main__':
