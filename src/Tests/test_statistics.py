@@ -19,7 +19,6 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(self.statistics.result, 0)
         print("Completed Stats Calc Property Test")
 
-
     # def test_mean_method_calculator(self):
     #     print("Beginning Mean Test")
     #     for row in self.test_stats_answers:
