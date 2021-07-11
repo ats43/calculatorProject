@@ -2,7 +2,8 @@ from src.Calculator.Addition import addition
 from src.Calculator.Subtraction import subtraction
 from src.Calculator.Multiplication import multiplication
 from src.Calculator.Division import division
-import math
+from src.Calculator.Square import square
+from src.Calculator.SquareRoot import sqrt
 
 
 class Calculator:   # defines the blueprints of the object
@@ -28,9 +29,9 @@ class Calculator:   # defines the blueprints of the object
         return self.result
 
     def square(self, a):
-        self.result = multiplication(a, a)
+        self.result = square(a)
         return self.result
 
     def sqrt(self, a):
-        self.result = float(math.sqrt(a))
+        self.result = sqrt(a)
         return self.result
