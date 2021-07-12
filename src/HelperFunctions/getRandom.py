@@ -15,3 +15,6 @@ def get_random_int_seeded():
 
 def get_random_dec_seeded():
     return random.seed(1000.0)
+
+# def get_random_int_list_seeded():
+#     return

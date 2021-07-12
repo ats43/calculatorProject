@@ -15,26 +15,26 @@ class Statistics(Calculator):
         self.data = CsvReader(filepath)
         super().__init__()
 
-    def mean(self):
-        self.result = mean(self.data)
-        return self.result
+    def mean(self, data):
+        self.data = mean(data)
+        return self.data
 
     def sample_mean(self, sample_size):
         self.result = sample_mean(self.data, sample_size)
         return self.result
 
-    def median(self):
-        self.result = median(self.data)
+    def median(self, data):
+        self.result = median(data)
         return self.result
 
-    def mode(self):
-        self.result = mode(self.data)
+    def mode(self, data):
+        self.result = mode(data)
         return self.result
 
-    def variance(self):
-        self.result = variance(self.data)
+    def variance(self, data):
+        self.result = variance(data)
         return self.result
 
-    def std(self):
-        self.result = std(self.data)
+    def std(self, data):
+        self.result = std(data)
         return self.result

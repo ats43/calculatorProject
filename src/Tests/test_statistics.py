@@ -1,16 +1,19 @@
 import statistics
 import unittest
 from src.CsvReader.csvReader import CsvReader
-# from src.Calculator.Calculator import Calculator
+from src.Calculator.Calculator import Calculator
 from src.Statistics.Statistics import Statistics
+from pprint import pprint
+import random
 
 
 class MyTestCase(unittest.TestCase):
-    test_data = CsvReader('src/Tests/Data/Unit Test Data.csv').data
-    stats_answers = CsvReader('src/Tests/Data/Unit Test Stats Answers.csv').data
-
     def setUp(self) -> None:
         self.statistics = Statistics()
+        self.random_int_list = [random.seed(5)]
+        self.testData = random.randint(0, 10)
+        self.test_lst = [1, 2, 3]
+
 
     def test_instantiate_calculator(self):
         self.assertIsInstance(self.statistics, Statistics)
@@ -20,17 +23,18 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(self.statistics.result, 0)
         print("Completed Stats Calc Property Test")
 
-    # def test_mean_method_calculator(self):
-    #     print("Beginning Mean Test")
-    #     for row in self.test_stats_answers:
-    #         print(row["Mean"])
-    #         self.assertEqual(self.statistics.mean(row['Value 1']))
-    #     print("Completed Mean Test")
-
     def test_mean(self):
         print("Beginning Mean Test")
-        self.assertEqual(statistics.mean([1, 2, 3]), 2)
+        mean = self.statistics.mean(self.test_lst)  # uses my mean function
+        self.assertEqual(mean, 2)
+        self.assertEqual(statistics.mean(self.test_lst), 2) # uses built-in stats mean function
         print("Completed Mean Test")
+
+    # def test_mean_csv(self):
+    #     print(self.random_int_list)
+    #     print(type(self.random_int_list))
+    #     mean = self.statistics.mean(self.random_int_list)
+    #     self.assertEqual(mean, 5)
 
 
 if __name__ == '__main__':
