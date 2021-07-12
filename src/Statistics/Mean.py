@@ -8,7 +8,7 @@ def mean(data):
         length = len(data)
         for num in data:
             total = addition(total, num)
-        return division(total, length)
+        return division(length, total)
     except ZeroDivisionError:
         print("Error: Cannot divide by 0!")
     except ValueError:

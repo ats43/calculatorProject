@@ -1,17 +1,16 @@
 import statistics
 import unittest
-from src.CsvReader.csvReader import CsvReader
-from src.Calculator.Calculator import Calculator
 from src.Statistics.Statistics import Statistics
-from pprint import pprint
 import random
+from src.HelperFunctions.getRandom import get_random_int_list
 
 
 class MyTestCase(unittest.TestCase):
     def setUp(self) -> None:
         self.statistics = Statistics()
-        self.random_int_list = [random.seed(5)]
+        random.seed(1000)
         self.testData = random.randint(0, 10)
+        self.random_lst = get_random_int_list()
         self.test_lst = [1, 2, 3]
 
 
@@ -27,14 +26,17 @@ class MyTestCase(unittest.TestCase):
         print("Beginning Mean Test")
         mean = self.statistics.mean(self.test_lst)  # uses my mean function
         self.assertEqual(mean, 2)
-        self.assertEqual(statistics.mean(self.test_lst), 2) # uses built-in stats mean function
+        self.assertEqual(statistics.mean(self.test_lst), 2)     # uses built-in stats mean function
+        mean2 = self.statistics.mean(self.random_lst)   # my mean function
+        mean3 = statistics.mean(self.random_lst)    # built-in mean
+        self.assertEqual(mean2, mean3)  # compares my mean and built-in
         print("Completed Mean Test")
 
-    # def test_mean_csv(self):
-    #     print(self.random_int_list)
-    #     print(type(self.random_int_list))
-    #     mean = self.statistics.mean(self.random_int_list)
-    #     self.assertEqual(mean, 5)
+
+    def test_median(self):
+        print("Beginning Median Test")
+        median = self.statistics.median(self.test_lst)      # my_median
+        self.assertEqual(median, 2)
 
 
 if __name__ == '__main__':
