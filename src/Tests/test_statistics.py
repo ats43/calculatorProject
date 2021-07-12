@@ -37,6 +37,11 @@ class MyTestCase(unittest.TestCase):
         print("Beginning Median Test")
         median = self.statistics.median(self.test_lst)      # my_median
         self.assertEqual(median, 2)
+        self.assertEqual(statistics.median(self.test_lst), 2)       # built-in function
+        median2 = self.statistics.median(self.random_lst)
+        median3 = statistics.median(self.random_lst)
+        self.assertEqual(median2, median3)
+        print("Completed Median Test")
 
 
 if __name__ == '__main__':
