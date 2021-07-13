@@ -32,6 +32,10 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(mean2, mean3)  # compares my mean and built-in
         print("Completed Mean Test")
 
+    def test_sample_mean(self):
+        print("Beginning Sample Mean Test")
+        sample_mean = self.statistics.sample_mean(self.test_lst)
+        self.assertEqual(sample_mean, )
 
     def test_median(self):
         print("Beginning Median Test")
@@ -44,14 +48,9 @@ class MyTestCase(unittest.TestCase):
         print("Completed Median Test")
 
 
-    def test_variance(self):
+    def test_population_variance(self):
         print("Beginning Variance Test")
-        realPopulationVariance = statistics.pvariance(self.random_lst)
-        print("realPopulationVariance = {}".format(realPopulationVariance))
-        realSampleVariance = statistics.variance(self.random_lst)
-        print("realSampleVariance = {}".format(realSampleVariance))
-        myPopulationVariance = self.statistics.population_variance(self.random_lst)
-        print("myPopulationVariance = {}".format(myPopulationVariance))
+        self.assertAlmostEqual(self.statistics.population_variance(self.random_lst), statistics.pvariance(self.random_lst))
         print("Completed Variance Test")
 
 
