@@ -2,25 +2,7 @@
 
 [![Build Status](https://www.travis-ci.com/ats43/calculatorProject.svg?branch=master)](https://www.travis-ci.com/ats43/calculatorProject)
 
-[![Build Status](https://www.travis-ci.com/ats43/calculatorProject.svg?branch=master)](https://www.travis-ci.com/ats43/iprofiler.png?branch=master)
 
-
-[![Build Status](https://www.travis-ci.com/ats43/calculatorProject.svg?branch=master)](https://www.travis-ci.org/ats43/calculatorProject)
-
-[![Build Status](https://www.travis-ci.com/ats43/calculatorProject.svg?branch=master)](https://www.travis-ci.org/ats43/iprofiler.png?branch=master)
-
-## Image Url
-
-https://www.travis-ci.com/ats43/calculatorProject.svg?branch=master
-
-https://www.travis-ci.org/ats43/calculatorProject.svg?branch=master
-
-
-## Alt Text
-
-![alt text] (https://www.travis-ci.com/ats43/calculatorProject.svg?branch=master)
-
-![alt text] (https://www.travis-ci.org/ats43/calculatorProject.svg?branch=master)
 #calculator
 
 
