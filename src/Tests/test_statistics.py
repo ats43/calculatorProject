@@ -2,7 +2,7 @@ import statistics
 import unittest
 from src.Statistics.Statistics import Statistics
 import random
-from src.HelperFunctions.getRandom import get_random_int_list
+from src.HelperFunctions.getRandomSeeded import get_random_int_list
 
 
 class MyTestCase(unittest.TestCase):
