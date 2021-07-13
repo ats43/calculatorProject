@@ -32,10 +32,12 @@ class MyTestCase(unittest.TestCase):
         self.assertEqual(mean2, mean3)  # compares my mean and built-in
         print("Completed Mean Test")
 
-    def test_sample_mean(self):
-        print("Beginning Sample Mean Test")
-        sample_mean = self.statistics.sample_mean(self.test_lst)
-        self.assertEqual(sample_mean, )
+    # def test_sample_mean(self):
+    #     print("Beginning Sample Mean Test")
+    #     sample_mean = self.statistics.sample_mean(self.test_lst)
+    #     self.assertEqual(sample_mean, 2)
+    #     self.assertEqual(self.statistics.sample_mean(self.random_lst), statistics.mean(self.random_lst))
+    #     print("Completed Sample Mean Test")
 
     def test_median(self):
         print("Beginning Median Test")
