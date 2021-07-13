@@ -55,6 +55,11 @@ class MyTestCase(unittest.TestCase):
         self.assertAlmostEqual(self.statistics.population_variance(self.random_lst), statistics.pvariance(self.random_lst))
         print("Completed Variance Test")
 
+    def test_standard_deviation(self):
+        print("Beginning Standard Deviation Test")
+        self.assertEqual(round(self.statistics.std(self.random_lst), 7), round(statistics.stdev(self.random_lst), 7))
+        print("Completed Standard Deviation Test")
+
 
 if __name__ == '__main__':
     unittest.main()
