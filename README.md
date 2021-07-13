@@ -3,7 +3,7 @@
 [![Build Status](https://www.travis-ci.com/ats43/calculatorProject.svg?branch=master)](https://www.travis-ci.com/ats43/calculatorProject)
 
 
-#calculator
+# calculator
 
 
 
