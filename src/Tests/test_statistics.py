@@ -44,5 +44,16 @@ class MyTestCase(unittest.TestCase):
         print("Completed Median Test")
 
 
+    def test_variance(self):
+        print("Beginning Variance Test")
+        realPopulationVariance = statistics.pvariance(self.random_lst)
+        print("realPopulationVariance = {}".format(realPopulationVariance))
+        realSampleVariance = statistics.variance(self.random_lst)
+        print("realSampleVariance = {}".format(realSampleVariance))
+        myPopulationVariance = self.statistics.population_variance(self.random_lst)
+        print("myPopulationVariance = {}".format(myPopulationVariance))
+        print("Completed Variance Test")
+
+
 if __name__ == '__main__':
     unittest.main()

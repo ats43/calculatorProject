@@ -1,10 +1,10 @@
 from src.Calculator.Calculator import sqrt
-from src.Statistics.Variance import variance
+from src.Statistics.PopulationVariance import population_variance
 
 
 def std(variance_number):
     try:
-        variance_number = variance(variance_number)
+        variance_number = population_variance(variance_number)
         return sqrt(variance_number)
     except ZeroDivisionError:
         print("Error: Cannot divide by 0!")

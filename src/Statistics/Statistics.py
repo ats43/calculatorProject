@@ -4,7 +4,7 @@ from src.Statistics.Mean import mean
 from src.Statistics.SampleMean import sample_mean
 from src.Statistics.Median import median
 from src.Statistics.Mode import mode
-from src.Statistics.Variance import variance
+from src.Statistics.PopulationVariance import population_variance
 from src.Statistics.StandardDeviation import std
 
 
@@ -31,8 +31,8 @@ class Statistics(Calculator):
         self.result = mode(data)
         return self.result
 
-    def variance(self, data):
-        self.result = variance(data)
+    def population_variance(self, data):
+        self.result = population_variance(data)
         return self.result
 
     def std(self, data):
