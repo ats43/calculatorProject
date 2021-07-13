@@ -1,12 +1,26 @@
-## Travis Build Status
+# Travis Build Status
 
 [![Build Status](https://www.travis-ci.com/ats43/calculatorProject.svg?branch=master)](https://www.travis-ci.com/ats43/calculatorProject)
 
+[![Build Status](https://www.travis-ci.com/ats43/calculatorProject.svg?branch=master)](https://www.travis-ci.com/ats43/iprofiler.png?branch=master)
 
-![image](https://www.travis-ci.com/ats43/calculatorProject.svg?branch=master)
 
-![image](https://travis-ci.com/ats43/calculatorProject/iprofiler.png?branch=master)
+[![Build Status](https://www.travis-ci.com/ats43/calculatorProject.svg?branch=master)](https://www.travis-ci.org/ats43/calculatorProject)
 
+[![Build Status](https://www.travis-ci.com/ats43/calculatorProject.svg?branch=master)](https://www.travis-ci.org/ats43/iprofiler.png?branch=master)
+
+## Image Url
+
+https://www.travis-ci.com/ats43/calculatorProject.svg?branch=master
+
+https://www.travis-ci.org/ats43/calculatorProject.svg?branch=master
+
+
+## Alt Text
+
+![alt text] (https://www.travis-ci.com/ats43/calculatorProject.svg?branch=master)
+
+![alt text] (https://www.travis-ci.org/ats43/calculatorProject.svg?branch=master)
 #calculator
 
 
